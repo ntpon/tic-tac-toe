@@ -19,7 +19,6 @@ const displayController = (() => {
         return;
       }
       if (gameController.checkGameFinish()) {
-        stopAnimation();
         return;
       }
       const span = document.createElement('span');
@@ -38,6 +37,7 @@ const displayController = (() => {
   const modalFinish = document.getElementById('modal-finish');
   modalFinish.style.display = 'none';
   const gameFinish = (text) => {
+    stopAnimation();
     const txtModal = document.getElementById('modal-text');
     txtModal.textContent = text;
     modalFinish.style.display = '';

@@ -38,7 +38,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  overflow: hidden;
 }
 .player {
   /* border: 1px solid white; */
@@ -130,7 +129,7 @@ header {
   border-radius: 10px;
 }
 .modal-content h2 {
-  font-size: 60px;
+  font-size: 50px;
   padding: 10px;
   text-transform: uppercase;
 }
@@ -209,5 +208,30 @@ input:active {
 
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 750px) {
+  .game-container {
+    flex-direction: column;
+  }
+  .player {
+    width: 100%;
+  }
+  .game-board {
+    margin: 50px 0;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .modal {
+    width: 100%;
+    left: 0;
+  }
+  .modal-content {
+    width: 100%;
+  }
+  .modal-content h2 {
+    font-size: 40px;
   }
 }
