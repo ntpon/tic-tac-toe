@@ -1,14 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="./app.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div id="modal-finish">
+      <div class="backdrop"></div>
+      <div class="modal">
+        <div class="modal-content">
+          <h2>🏆 <span id="modal-text"> Player Win! </span></h2>
+          <button class="btn btn-play-again">Play Again</button>
+        </div>
+      </div>
+    </div>
+    <div id="modal-name">
+      <div class="backdrop"></div>
+      <div class="modal">
+        <div class="modal-content">
+          <h3 class="txt-header">Enter Your Name</h3>
+          <form id="form-name">
+            <div class="form-group">
+              <label>Name #1:</label>
+              <input type="text" value="Player 1" required id="player-1-name" />
+            </div>
+            <div class="form-group">
+              <label>Name #2:</label>
+              <input type="text" value="Player 2" required id="player-2-name" />
+            </div>
+            <div class="btn-list">
+              <button class="btn" type="submit">Start GAME</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <header>
+      <h1>Tic Tac Toe</h1>
+    </header>
+    <div class="container">
+      <div class="game-container">
+        <div class="player" id="container-player-1">
+          <h2>X</h2>
+          <h3 id="name-player-x">Player 1</h3>
+        </div>
+        <div class="game-board">
+          <div id="0" class="tile empty-border"></div>
+          <div id="1" class="tile empty-border-top empty-border-bottom"></div>
+          <div id="2" class="tile empty-border"></div>
+          <div id="3" class="tile empty-border-left empty-border-right"></div>
+          <div id="4" class="tile"></div>
+          <div id="5" class="tile empty-border-left empty-border-right"></div>
+          <div id="6" class="tile empty-border"></div>
+          <div id="7" class="tile empty-border-top empty-border-bottom"></div>
+          <div id="8" class="tile empty-border"></div>
+        </div>
+        <div class="player" id="container-player-2">
+          <h2>O</h2>
+          <h3 id="name-player-o">Player 2</h3>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
